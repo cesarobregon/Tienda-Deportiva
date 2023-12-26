@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+body {
+    background-color: #F5F5F5;
+    background-size: cover;
+}
+
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*logo, menu principal, submenus, titulo de la pagina*/
+
+header {
+    background-color: rgb(18, 28, 41);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 120px;
+}
+
+.mensaje-inferior {
+    background-color: rgb(28, 53, 85);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.titulo {
+    color: white;
+    font-size: 55px;
+    font-family: 'Lora', serif;
+}
+
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.menu-horizontal>li>a {
+    display: block;
+    padding: 15px 15px;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-horizontal>li:hover {
+    background-color: rgb(28, 53, 85);
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+}
+
+/*imagen inferior con las formas de pago*/
+
+.pago {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.pago img {
+    width: 70%;
+    height: 100%;
+}
+
+
+/*carrusel de imagenes de la pantalla principal*/
+
+#contenedor-img {
+    height: 330px;
+    overflow: hidden;
+}
+
+.imagenes {
+    height: 330px;
+    position: relative;
+    z-index: 1;
+}
+
+.imagen {
+    height: 100%;
+}
+
+.flecha {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    color: rgb(255, 255, 255);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*Pagina "Camisetas"*/
+
+.container-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 50px;
+}
+
+
+.item {
+    border-radius: 10px;
+
+}
+
+.item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.info-producto {
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.precio {
+    font-size: 22px;
+    font-weight: 900;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+.info-producto .boton {
+    border: none;
+    background-color: rgb(18, 28, 41);
+    color: white;
+    padding: 8px 8px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+}
+
+.info-producto .boton:hover {
+    background-color: rgb(28, 53, 85);
+}
+
+
+.info-producto h2 {
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
+
+.item img {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px 10px 0 0;
+}
+
+/*Carrito de compras, tabla y resumen*/
+
+.container-carrito {
+    font-family: 'Nunito', sans-serif;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.container-carrito .tabla1 {
+    background-color: #fff;
+    margin: auto;
+    padding: 4em 3em;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+
+}
+
+.container-carrito .tabla1 table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid rgb(18, 28, 41);
+}
+
+.container-carrito .tabla1 table th {
+    background-color: rgb(28, 53, 85);
+    color: white;
+}
+
+.container-carrito .tabla1 table tr td {
+    padding: 5px 5px;
+    border: 1px solid rgb(18, 28, 41);
+}
+
+
+
+.resumen {
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    padding: 4.5em 3em;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: auto;
+}
+
+.resumen .tabla2 {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/*botones del carrito de compras*/
+.container-carrito .resumen .botones {
+    display: inline-block;
+}
+
+.container-carrito .resumen .btn-comprar {
+
+    background-color: rgb(24, 179, 10);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    padding: .8em .8em;
+    border-radius: .5em;
+}
+
+.container-carrito .resumen .btn-comprar:hover {
+    background-color: rgb(12, 116, 9);
+}
+
+.container-carrito .resumen .btn-vaciar {
+
+    background-color: rgb(223, 8, 8);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    padding: .8em .8em;
+    border-radius: .5em;
+}
+
+.container-carrito .resumen .btn-vaciar:hover {
+    background-color: rgb(116, 6, 6);
+}
+
+
+/*Camiseta, informacion, formas de pago, etc.*/
+
+.container-camiseta {
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+    background-size: 20px 20px;
+    display: flex;
+    min-height: 80vh;
+    align-items: center;
+}
+
+.camiseta {
+    margin: auto;
+    width: 450px;
+    height: 450px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.detalle-compra {
+    margin: auto;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 25px 25px;
+
+}
+
+.detalle-compra .btn-carrito {
+    background-color: rgb(18, 28, 41);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    padding: .8em .8em;
+    border-radius: .5em;
+}
+
+.detalle-compra .btn-carrito:hover {
+    background-color: rgb(28, 53, 85);
+}
+
+
+/*Pie de pagina*/
+
+.pie {
+    width: 100%;
+    background-color: rgb(18, 28, 41);
+}
+
+.pie .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+}
+
+.pie .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pie .grupo-1 .box h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.pie .grupo-1 .box p {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.pie .grupo-1 .redsocial img {
+    display: inline-block;
+    text-decoration: none;
+    width: 40px;
+    height: 35px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pie .grupo-2 {
+    background-color: rgb(28, 53, 85);
+    padding: 10px 10px;
+    text-align: center;
+    color: white;
+}

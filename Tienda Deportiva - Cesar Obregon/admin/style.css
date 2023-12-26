@@ -1,0 +1,129 @@
+body {
+    background-color: #F5F5F5;
+    background-size: cover;
+}
+
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(18, 28, 41);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.titulo {
+    color: white;
+    font-size: 55px;
+    font-family: 'Lora', serif;
+}
+
+.container-login {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    min-height: 85vh;
+}
+
+.form {
+    background-color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 2em 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.form-titulo {
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+
+.form-parrafo {
+    font-weight: 300;
+}
+
+
+.form-container {
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.form-grupo {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    background: none;
+    color: #706e6e;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #5757577e;
+    font-family: 'Nunito', sans-serif;
+}
+
+.form-label {
+    color: #5757577e;
+    cursor: text;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+}
+
+.form-input:focus+.form-label,
+.form-input:not(:placeholder-shown)+.form-label {
+    color: rgba(0, 0, 0, 0);
+}
+
+.form-submit {
+    background-color: rgb(18, 28, 41);
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em .8em;
+    border-radius: .5em;
+}
+
+.form-submit:hover {
+    background-color: rgb(28, 53, 85);
+    cursor: pointer;
+}
+
+div {
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+div .boton {
+    display: inline-block;
+}
+
+/*tabla administrador*/
+
+.tabla-inicio {
+    table-layout: fixed;
+    width: 90%;
+    background-color: #fff;
+    margin: auto;
+    text-align: center;
+}
+
+.tabla-inicioo th {
+    background-color: rgb(28, 53, 85);
+    color: white;
+}
+
+.tabla-inicio td {
+    border: 1px solid rgb(18, 28, 41);
+}
